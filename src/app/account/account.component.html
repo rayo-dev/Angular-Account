@@ -1,0 +1,46 @@
+<p>
+  <input
+    type="text"
+    id="createAccountInput"
+    name="createAccountInput"
+    #createAccountInput
+  />
+</p>
+
+<button
+  id="createAccountButton"
+  #createAccountButton
+  type="button"
+  (click)="create(createAccountInput.value)"
+>
+  Create
+</button>
+
+<p>
+  <input
+    type="text"
+    id="topupAccountInput"
+    name="topupAccountInput"
+    [(ngModel)]="topupAccount"
+  />
+</p>
+
+<p>
+  <input
+    type="number"
+    id="topupAmountInput"
+    name="topupAmountInput"
+    [(ngModel)]="topupAmount"
+  />
+</p>
+
+<button
+  id="topupAccountButton"
+  #topupAccountButton
+  type="button"
+  (click)="topup($event)"
+>
+  Topup
+</button>
+
+<div id="message">{{ message }}</div>
